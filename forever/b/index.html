@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>A WoW Forever build · Forever Talents</title>
+    <meta name="description" content="See its talents, spells and votes in Forever Talents, the talent calculator for WoW Forever." />
+    <meta name="theme-color" content="#0B0D12" />
+    <meta name="apple-itunes-app" content="app-id=6816759519" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Forever Talents" />
+    <meta property="og:title" content="A WoW Forever build · Forever Talents" />
+    <meta property="og:description" content="See its talents, spells and votes in Forever Talents, the talent calculator for WoW Forever." />
+    <meta property="og:image" content="https://aaaanis.github.io/forever/share-card.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Forever Talents: a talent tree in the app" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script>
+      (function () {
+        var value = new URLSearchParams(location.search).get("id") || '';
+        var path = /^[0-9A-Za-z]{4,16}$/.test(value) ? "/b/" + value : '/';
+        history.replaceState(null, '', "/forever/app" + path);
+      })();
+    </script>
+    <!-- The `react-native-web` recommended style reset: https://necolas.github.io/react-native-web/docs/setup/#root-element -->
+    <style id="expo-reset">
+      /* These styles make the body full-height */
+      html,
+      body {
+        height: 100%;
+      }
+      /* These styles disable body scrolling if you are using <ScrollView> */
+      body {
+        overflow: hidden;
+      }
+      /* These styles make the root element full-height */
+      #root {
+        display: flex;
+        height: 100%;
+        flex: 1;
+      }
+    </style>
+  <link rel="icon" href="/forever/app/favicon.ico"/></head>
+
+  <body>
+    <!-- Use static rendering with Expo Router to support running without JavaScript. -->
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <!-- The root element for your Expo app. -->
+    <div id="root"></div>
+  <script src="/forever/app/_expo/static/js/web/entry-65ddaa88e763280d60fe8f5bfae5d68f.js" defer></script>
+</body>
+</html>

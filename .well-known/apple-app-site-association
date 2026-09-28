@@ -1,0 +1,25 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": [
+          "7F8G8TQFZJ.com.forevertalents.app"
+        ],
+        "components": [
+          {
+            "/": "/forever/b/*"
+          },
+          {
+            "/": "/forever/calc/*"
+          },
+          {
+            "/": "/forever/app/b/*"
+          },
+          {
+            "/": "/forever/app/calc/*"
+          }
+        ]
+      }
+    ]
+  }
+}

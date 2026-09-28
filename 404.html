@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Page not found</title>
+    <meta name="robots" content="noindex" />
+    <!-- The `react-native-web` recommended style reset: https://necolas.github.io/react-native-web/docs/setup/#root-element -->
+    <style id="expo-reset">
+      /* These styles make the body full-height */
+      html,
+      body {
+        height: 100%;
+      }
+      /* These styles disable body scrolling if you are using <ScrollView> */
+      body {
+        overflow: hidden;
+      }
+      /* These styles make the root element full-height */
+      #root {
+        display: flex;
+        height: 100%;
+        flex: 1;
+      }
+    </style>
+  <link rel="icon" href="/forever/app/favicon.ico"/></head>
+
+  <body>
+    <!-- Use static rendering with Expo Router to support running without JavaScript. -->
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <!-- The root element for your Expo app. -->
+    <div id="root"></div>
+  
+<div id="not-found" hidden style="font: 16px -apple-system, 'Segoe UI', sans-serif; color: #F3EBD8; background: #0B0D12; min-height: 100%; padding: 48px 24px; box-sizing: border-box;">
+      <h1 style="font-size: 24px;">Page not found</h1>
+      <p><a href="/" style="color: #E6B656;">Go to the home page</a></p>
+    </div>
+    <script>
+      (function () {
+        if (location.pathname.indexOf("/forever/app/") === 0) {
+          document.title = 'Forever Talents';
+          ["/forever/app/_expo/static/js/web/entry-65ddaa88e763280d60fe8f5bfae5d68f.js"].forEach(function (src) {
+            var script = document.createElement('script');
+            script.src = src;
+            script.async = false;
+            document.body.appendChild(script);
+          });
+        } else {
+          document.getElementById('root').remove();
+          document.getElementById('not-found').hidden = false;
+          document.body.style.overflow = 'auto';
+        }
+      })();
+    </script>
+</body>
+</html>

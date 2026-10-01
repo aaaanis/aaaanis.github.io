@@ -7,13 +7,7 @@
         ],
         "components": [
           {
-            "/": "/forever/b/*"
-          },
-          {
             "/": "/forever/calc/*"
-          },
-          {
-            "/": "/forever/app/b/*"
           },
           {
             "/": "/forever/app/calc/*"

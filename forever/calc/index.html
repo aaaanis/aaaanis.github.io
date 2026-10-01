@@ -24,8 +24,11 @@
         var valid = /^[a-z][a-z-]*(\/[0-9a-z-]*)?$/.test(code);
         var path = valid ? '/calc/' + code : '/';
         var level = params.get('level');
-        var query = valid && level !== null && /^[1-9]\d*$/.test(level) && Number.isSafeInteger(Number(level)) ? '?level=' + Number(level) : '';
-        history.replaceState(null, '', "/forever/app" + path + query);
+        var query = [];
+        if (valid && level !== null && /^[1-9]\d*$/.test(level) && Number.isSafeInteger(Number(level))) query.push('level=' + Number(level));
+        var legacy = params.get('legacy');
+        if (valid && legacy !== null) query.push('legacy=' + encodeURIComponent(legacy));
+        history.replaceState(null, '', "/forever/app" + path + (query.length ? '?' + query.join('&') : ''));
       })();
     </script>
     <!-- The `react-native-web` recommended style reset: https://necolas.github.io/react-native-web/docs/setup/#root-element -->
@@ -55,6 +58,6 @@
     </noscript>
     <!-- The root element for your Expo app. -->
     <div id="root"></div>
-  <script src="/forever/app/_expo/static/js/web/entry-b609c05156163f4489cd525b6b100baf.js" defer></script>
+  <script src="/forever/app/_expo/static/js/web/entry-e6c364b3c2edc759add35e887b0e32a6.js" defer></script>
 </body>
 </html>

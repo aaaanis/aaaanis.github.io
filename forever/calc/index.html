@@ -19,10 +19,13 @@
     <meta name="twitter:card" content="summary_large_image" />
     <script>
       (function () {
-        var value = new URLSearchParams(location.search).get("code") || '';
-        value = value.toLowerCase();
-        var path = /^[a-z][a-z-]*(\/[0-9a-z-]*)?$/.test(value) ? "/calc/" + value : '/';
-        history.replaceState(null, '', "/forever/app" + path);
+        var params = new URLSearchParams(location.search);
+        var code = (params.get('code') || '').toLowerCase();
+        var valid = /^[a-z][a-z-]*(\/[0-9a-z-]*)?$/.test(code);
+        var path = valid ? '/calc/' + code : '/';
+        var level = params.get('level');
+        var query = valid && level !== null && /^[1-9]\d*$/.test(level) && Number.isSafeInteger(Number(level)) ? '?level=' + Number(level) : '';
+        history.replaceState(null, '', "/forever/app" + path + query);
       })();
     </script>
     <!-- The `react-native-web` recommended style reset: https://necolas.github.io/react-native-web/docs/setup/#root-element -->
@@ -52,6 +55,6 @@
     </noscript>
     <!-- The root element for your Expo app. -->
     <div id="root"></div>
-  <script src="/forever/app/_expo/static/js/web/entry-64e266c84a6470de81e3e180440ccb2c.js" defer></script>
+  <script src="/forever/app/_expo/static/js/web/entry-b609c05156163f4489cd525b6b100baf.js" defer></script>
 </body>
 </html>
